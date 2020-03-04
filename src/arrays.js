@@ -1,6 +1,6 @@
 const getNthElement = (index, array) => {
   // your code here
-  
+ /* 
 let l=array.length;
 if(index%l==0)
   return array[0];
@@ -14,40 +14,57 @@ else if (index%l==2)
       else if (index%l==3)
 return array[3];
         
- else return 0;
+ else return 0;*/
+ return array[index % array.length];
   
 };
 
-const arrayToCSVString = array => {
+const arrayToCSVString = array => { //array to string
   // your code here
+  return (array.toString());
 };
 
-const csvStringToArray = string => {
-  // your code here
+const csvStringToArray = string => { //string to array
+  // your code here 
+  return string.split(",");
 };
 
 const addToArray = (element, array) => {
   // your code here
+  array.push(element);
 };
 
 const addToArray2 = (element, array) => {
   // your code here
+  return array.concat(element); //unshift() adds to beginning of array
 };
 
 const removeNthElement = (index, array) => {
   // your code here
+  return array.splice(index,1);
 };
 
 const numbersToStrings = numbers => {
   // your code here
+  return numbers.join().split(','); //Omit the space, also can do numbers.map(String);
 };
 
 const uppercaseWordsInArray = strings => {
   // your code here
+return strings.map(f=>{ 
+    return f.toUpperCase();
+   });
 };
 
 const reverseWordsInArray = strings => {
   // your code here
+ return strings.map(f=>{ 
+    return f.split("").reverse().join("").split(" ").reverse().join(" ");
+   });
+  // return newArray;
+ /* strings.map(func=>{
+    return func.reverse().split(", ");
+  }); */
 };
 
 const onlyEven = numbers => {
