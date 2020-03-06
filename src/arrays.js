@@ -76,7 +76,7 @@ const onlyEven = numbers => {
 const removeNthElement2 = (index, array) => {
   // your code here
   
- // return array.slice(index); //SHOULD WORK IMO
+ return array.slice(0, index).concat(array.slice(index + 1, array.length));
 };
 
 const elementsStartingWithAVowel = strings => {
