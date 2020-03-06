@@ -69,22 +69,36 @@ const reverseWordsInArray = strings => {
 
 const onlyEven = numbers => {
   // your code here
+  return (numbers.filter(evennum => evennum%2==0));
+
 };
 
 const removeNthElement2 = (index, array) => {
   // your code here
+  
+ // return array.slice(index); //SHOULD WORK IMO
 };
 
 const elementsStartingWithAVowel = strings => {
   // your code here
+  //Use filter()
+
+   let newArray=strings.filter(element=>
+  element.startsWith("a") || element.startsWith("e") || element.startsWith("i") || element.startsWith("o") || element.startsWith("u"));
+return (newArray); 
 };
 
 const removeSpaces = string => {
   // your code here
+  return string.split("").filter(element=> element !== " ").join("");
 };
 
 const sumNumbers = numbers => {
   // your code here
+  let accumulator=0;
+  const reducer = (accumulator, numbers) => accumulator + numbers;
+  return numbers.reduce(reducer);
+
 };
 
 const sortByLastLetter = strings => {
