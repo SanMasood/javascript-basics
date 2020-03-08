@@ -103,6 +103,7 @@ const sumNumbers = numbers => {
 
 const sortByLastLetter = strings => {
   // your code here
+  //reverse string and then sort, unreverse ?
 };
 
 module.exports = {
